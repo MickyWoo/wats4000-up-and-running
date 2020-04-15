@@ -36,18 +36,40 @@ requirements.
 * Test the site by running `npm run serve` to start the development server.
 * Read through the site code and note the following:
     * What directories do you see? How do you interpret their names?
+        docs, node_modules,public, src, babel.config.js are all similar to original setup, but postcssrc.js is new and aliases.config.js
+
     * Where is the Vue app defined? (Which file?)
+      the vue app seems to be in the aliases.config because it points alias: require('./aliases.config').webpack
+
     * What is listed in `package.json`?
+      browserslist, postcss, eslintConfig, devDependencies, dependencies, besically an array listing all the broad items needed.
+
 * Press `ctrl-c` in the terminal to exit the development server.
 * Run `npm run build` and take a look at both the webpage that comes up and the output in the console.  
 Consider the following questions:
     * what is in the node_modules directory?
-    * where can you find the directions for the scripts run with `npm run`, that is the `serve` and `build` scripts  
+        > they are the the parts and fucntions the come together to build your site.
+    * where can you find the directions for the scripts run with `npm run`, that is the `serve` and `build` scripts 
+        -- grep -r "npm run"...bad idea gave me the whole list...
+        but it found them under node-Modules 
+        and README.md
+
     * what's the difference between the `dependencies` and `devDependencies` object in the package.json file?
+        > it would seem like depensencies just rely on vue 2.5.21 and devDependencies rely on vue alongside bable and eslint, template complier.
+        -- so its my assumtion that dependencies are the front page and devDependencie are the backend
+
     * Explore the `docs` directory. What do you see?
+        > the docs contain:
+        -assets which have the CSS and JS and Index.html. All of Which are the main structure of a webpage.
+
     * Do you see the filenames of the static files? What seems odd about those filenames?
+        > when referring to just the Docs directory the static files seem to be all the css and .js files which are app.88 and chunk-vendors.  
+
     * Do you see the contents of your JS and CSS files? What has happened to those contents?
+        > they are all pulling from webpacks and is not presented very nicely for coders is all I can say. And all use "sourceMapping"
+
     * Three config files have been supplied for you: `vue.config.js`, `aliases.config.js` and `.babel.config.js`. What is the general purpose of each file.  
+        > 
     * Describe (in words and with a flowchart/diagram) what happens when the `npm run build` command is executed to the best of your ability.  
     * Make a diagram of the components of this system like the ones shown in the Practical JavaScript 2: Building Applications book `Types of Website Architectures`. Do your best to document your interpretation of the architecture of this system.
     
