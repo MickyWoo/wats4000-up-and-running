@@ -36,13 +36,13 @@ requirements.
 * Test the site by running `npm run serve` to start the development server.
 * Read through the site code and note the following:
     * What directories do you see? How do you interpret their names?
-        docs, node_modules,public, src, babel.config.js are all similar to original setup, but postcssrc.js is new and aliases.config.js
+       > docs, node_modules,public, src, babel.config.js are all similar to original setup, but postcssrc.js is new and aliases.config.js
 
     * Where is the Vue app defined? (Which file?)
-      the vue app seems to be in the aliases.config because it points alias: require('./aliases.config').webpack
+     > the vue app seems to be in the aliases.config because it points alias: require('./aliases.config').webpack
 
     * What is listed in `package.json`?
-      browserslist, postcss, eslintConfig, devDependencies, dependencies, besically an array listing all the broad items needed.
+     > browserslist, postcss, eslintConfig, devDependencies, dependencies, besically an array listing all the broad items needed.
 
 * Press `ctrl-c` in the terminal to exit the development server.
 * Run `npm run build` and take a look at both the webpage that comes up and the output in the console.  
@@ -50,7 +50,7 @@ Consider the following questions:
     * what is in the node_modules directory?
         > they are the the parts and fucntions the come together to build your site.
     * where can you find the directions for the scripts run with `npm run`, that is the `serve` and `build` scripts 
-        -- grep -r "npm run"...bad idea gave me the whole list...
+       > -- grep -r "npm run"...bad idea gave me the whole list...
         but it found them under node-Modules 
         and README.md
 
