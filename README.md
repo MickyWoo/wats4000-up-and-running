@@ -37,6 +37,7 @@ requirements.
 * Read through the site code and note the following:
     * What directories do you see? How do you interpret their names?
        > docs, node_modules,public, src, babel.config.js are all similar to original setup, but postcssrc.js is new and aliases.config.js
+       > they all these names are all frameworks to me, preset data to build the website in the background hence .js /.json is my assumtion.
 
     * Where is the Vue app defined? (Which file?)
      > the vue app seems to be in the aliases.config because it points alias: require('./aliases.config').webpack
@@ -69,8 +70,14 @@ Consider the following questions:
         > they are all pulling from webpacks and is not presented very nicely for coders is all I can say. And all use "sourceMapping"
 
     * Three config files have been supplied for you: `vue.config.js`, `aliases.config.js` and `.babel.config.js`. What is the general purpose of each file.  
-        > 
+        > vue.config.js : to me is funnel that directs all your items in "docs" which are assets > css and JS and HTML
+        > aliases.config.js: directs all the information needed from webpacks
+        > babel.config.js : directs all the information needed from vue and "presets" or I guess.
+
     * Describe (in words and with a flowchart/diagram) what happens when the `npm run build` command is executed to the best of your ability.  
+        > I think `npm run build` command runs any of the items from the npm install which are the package.json files which are the rules(Vue.config.js) linking: src & node_modules and directories. 
+        > THEN tempalates( babel./config.js) for your website. Which connect: "docs" that contain your CSS & .js
+
     * Make a diagram of the components of this system like the ones shown in the Practical JavaScript 2: Building Applications book `Types of Website Architectures`. Do your best to document your interpretation of the architecture of this system.
     
 * Deploy your code to github.com and set up gh-pages on the `docs` directory.
