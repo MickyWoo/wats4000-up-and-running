@@ -56,7 +56,7 @@ Consider the following questions:
         and README.md
 
     * what's the difference between the `dependencies` and `devDependencies` object in the package.json file?
-        > it would seem like depensencies just rely on vue 2.5.21 and devDependencies rely on vue alongside bable and eslint, template complier.
+        > it would seem like depensencies just rely on vue 2.5.21 which are front-end  and devDependencies rely on vue  alongside bable and eslint, template complier as a devdependency back-end.
         -- so its my assumtion that dependencies are the front page and devDependencie are the backend
 
     * Explore the `docs` directory. What do you see?
@@ -64,15 +64,15 @@ Consider the following questions:
         -assets which have the CSS and JS and Index.html. All of Which are the main structure of a webpage.
 
     * Do you see the filenames of the static files? What seems odd about those filenames?
-        > when referring to just the Docs directory the static files seem to be all the css and .js files which are app.88 and chunk-vendors.  
+        > when referring to just the Docs directory the static files seem to be all the css and .js files which are app.88 and chunk-vendors.  The "files are the results of combining many source files into just a few files for delivery to our users. "
 
     * Do you see the contents of your JS and CSS files? What has happened to those contents?
         > they are all pulling from webpacks and is not presented very nicely for coders is all I can say. And all use "sourceMapping"
 
     * Three config files have been supplied for you: `vue.config.js`, `aliases.config.js` and `.babel.config.js`. What is the general purpose of each file.  
-        > vue.config.js : to me is funnel that directs all your items in "docs" which are assets > css and JS and HTML
-        > aliases.config.js: directs all the information needed from webpacks
-        > babel.config.js : directs all the information needed from vue and "presets" or I guess.
+        > vue.config.js : to me is funnel that directs all your items in "docs" which are assets > css and JS and HTML for static-page
+        > aliases.config.js: directs all the information src and @ used between vue and babel
+        > babel.config.js : directs all the information needed from webpack and is the backend devdependencies that process dynamic pages
 
     * Describe (in words and with a flowchart/diagram) what happens when the `npm run build` command is executed to the best of your ability.  
         > I think `npm run build` command runs any of the items from the npm install which are the package.json files which are the rules(Vue.config.js) linking: src & node_modules and directories. 
